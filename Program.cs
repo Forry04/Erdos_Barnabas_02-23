@@ -13,7 +13,7 @@
                 Taborok.Add(new(streamReader.ReadLine()));
             }
 
-            Console.WriteLine($"{Sorszam(6,16)}");
+            Console.WriteLine($"{Sorszam(8,31)}");
            
             //2. feladat
             Console.WriteLine("2.feladat");
@@ -100,21 +100,17 @@
             int juniusNapok = 30;
             int juliusNapok = 31;
 
-            if (honap == 6)
+            switch (honap)
             {
-                return nap-15;
-            }
-            else if (honap == 7)
-            {
-                return juniusNapok + nap-15;
-            }
-            else if (honap == 8)
-            {
-                return juniusNapok + juliusNapok + nap - 15;
-            }
-            else
-            {
-                return 0;
+                case 6:
+                    return nap-15;
+                case 7:
+                    return juniusNapok + nap-15;
+                case 8:
+                    return juniusNapok + juliusNapok + nap-15;
+                default:
+                    return 0;
+                    
             }
         }
 

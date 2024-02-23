@@ -13,7 +13,7 @@
                 Taborok.Add(new(streamReader.ReadLine()));
             }
 
-            Console.WriteLine($"{Sorszam(7,17)}");
+            Console.WriteLine($"{Sorszam(6,16)}");
            
             //2. feladat
             Console.WriteLine("2.feladat");
@@ -26,7 +26,7 @@
             Console.WriteLine("3. feladat");
 
             var fel3 = Taborok.Where(x => x.Tema == "zenei").ToList();
-            if (fel3.Count()>0)
+            if (fel3.Count>0)
             {
                 
                 foreach (var item in fel3)
@@ -47,7 +47,7 @@
             Console.WriteLine("Legnépszerűbbek");
             for (int i = 0; i < fel4.Count(); i++)
             {
-                if (fel4[0].Diakok.Count() == fel4[i].Diakok.Count())
+                if (fel4[0].Diakok.Length == fel4[i].Diakok.Length)
                 {
                     Console.WriteLine($"{fel4[i].KezdoHonap} {fel4[i].KezdoNap} {fel4[i].Tema}");
                 }
@@ -102,19 +102,19 @@
 
             if (honap == 6)
             {
-                return nap - 16;
+                return nap-15;
             }
             else if (honap == 7)
             {
-                return juniusNapok + nap-16;
+                return juniusNapok + nap-15;
             }
             else if (honap == 8)
             {
-                return juniusNapok + juliusNapok + nap - 16;
+                return juniusNapok + juliusNapok + nap - 15;
             }
             else
             {
-                return -0;
+                return 0;
             }
         }
 

@@ -13,7 +13,6 @@
                 Taborok.Add(new(streamReader.ReadLine()));
             }
 
-            Console.WriteLine($"{Sorszam(8,31)}");
            
             //2. feladat
             Console.WriteLine("2.feladat");
